@@ -10,12 +10,12 @@ cdthis
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好了，一个名为cddest的alias已经在你当前的bash里生效了！已经生效了！<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;快执行第一个“cddest”去跳转到你的“dest”目录吧！<br/>
 <br/>
-<br/>
-<br/>
 
 问题来了
 -------
 Linux跳转技术哪家强？GitHub找pandaoknight/cdthis。
+<br/>
+<br/>
 <br/>
 <br/>
 
