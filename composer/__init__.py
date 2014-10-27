@@ -66,7 +66,8 @@ class Composer:
 
     def _read(self):
         #如果有重名，则以后面一个为准，因为实际上bash也是这么做的，后定义的alias会覆盖前面重名的。
-        with open(os.path.expanduser(self.__path), 'r') as f:
+        #with open(os.path.expanduser(self.__path), 'r') as f:
+        with open(os.path.expanduser(self.__path), 'a+') as f:
             alltext = f.read()
             for matched in self._findall(alltext):
                 r = Record()
