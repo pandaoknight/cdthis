@@ -4,5 +4,5 @@ $project_root/main.py $*
 path='/tmp/cdthis_gen_bash'
 if [ -f $path ]; then
     . $path
-    rm $path
+    rm -f $path
 fi
