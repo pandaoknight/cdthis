@@ -18,3 +18,5 @@ WARNING   =  YELLOW + '%s' + RESET
 ERROR     =  RED + '%s' + RESET
 CRITICAL  =  RED + '%s' + RESET
 EXCEPTION =  RED + '%s' + RESET
+
+#test
