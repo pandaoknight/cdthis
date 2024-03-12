@@ -30,20 +30,20 @@ def cdthis():
     cp._read()  #TODO:[良构:这种顺序执行还是耦合太紧]
     # 排它参数区 begin
     if options.version:
-        print const_version;
+        print(const_version)
         return True
     if options.list and not options.listall:
-        print "[info]List..."
+        print("[info]List...")
         cp.list()
         return True
     if options.listall:
-        print "[info]List All..."
+        print("[info]List All...")
         cp.list()  #TODO:[功能:现在的-la和-l的效果是一样]
         return True
     # 排它参数区 end
 
     if options.delete:
-        print "[info]Delete..."
+        print("[info]Delete...")
         if cp.remove(options.delete):
             cp._write()
             #cp._source()
@@ -54,7 +54,7 @@ def cdthis():
             return False
 
 
-    print "[info] Add new..."#TODO:[良构-可扩展:当所有分支都没有走到时，才认为做add()的模式，可扩展性不够好。]
+    print("[info] Add new...")#TODO:[良构-可扩展:当所有分支都没有走到时，才认为做add()的模式，可扩展性不够好。]
     adding_name = args[0] if len(args) > 0 else os.getcwd().split('/')[-1]
     if cp.add(os.getcwd(), adding_name, options.force):
         cp._write()
