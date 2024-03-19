@@ -59,6 +59,7 @@ class Composer:
     def _read(self):
         # print("[debug] _read path: ", open(os.path.expanduser(self.__path), 'a+'))
         #with open(os.path.expanduser(self.__path), 'a+') as f: # BUG FIXED
+        open('/root/.bash_cdthis', 'a').close()
         with open(os.path.expanduser(self.__path), 'r') as f:
             alltext = f.read()
             # print("[debug] _read alltext: ", alltext)
