@@ -22,7 +22,7 @@ tpl_done = Template(tpl).substitute(path = const_string.cdthis_path, cr = const_
 cdthis_alias_tpl = "alias cdthis='. %s %s'"
 #project_root = os.path.realpath( os.path.join( os.getcwd(), os.path.dirname(__file__) ) )
 project_root = os.path.realpath( os.path.dirname(__file__) )  #CLEAN:[无歧义:使用realpath可以稳定地获得绝对路径，然后用于生成脚本，保证执行可靠]
-print project_root
+print(project_root)
 cdthis_alias_tpl_done = cdthis_alias_tpl % ((project_root + "/cdthis"), project_root)
 
 def checkEntryFile():
@@ -40,11 +40,11 @@ def appendEntry():
 
 def setup():
     if not checkEntryFile(): #如果已经存在入口，则不再向.bashrc append代码。
-        print "[info] Entry not exists in %s, then append." % const_string.entry_path
+        print("[info] Entry not exists in %s, then append." % const_string.entry_path)
         appendEntry()
-        print "\033[1;32;40m"+"[IMPORTANT!!] To take EFFECT. Please restart your bash, or CLONE your session in terminal!"+"\033[0m" #TODO:[重构:改为使用coloram]
+        print("\033[1;32;40m"+"[IMPORTANT!!] To take EFFECT. Please restart your bash, or CLONE your session in terminal!"+"\033[0m") #TODO:[重构:改为使用coloram]
     else:
-        print "[warn] Entry already exists in %s." % const_string.entry_path
+        print("[warn] Entry already exists in %s." % const_string.entry_path)
     pass  #TODO:[待尝试的技术:增加日志或者控制台输出。]
 
 def uninstall():
@@ -72,10 +72,10 @@ if "__main__" == __name__:
     #CLEAN:[程序之道:把实现可逆的操作作为一个好习惯]
     if not options.uninstall:
         setup();
-        print "[info] Setup finished!!";
+        print("[info] Setup finished!!");
     else:
         if uninstall():
-            print "[info] Uninstall finished!!";
+            print("[info] Uninstall finished!!");
         else:
-            print "[warn] Uninstall failed, no runnable entry already.";
+            print("[warn] Uninstall failed, no runnable entry already.");
     pass
