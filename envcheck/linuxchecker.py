@@ -20,7 +20,7 @@ def issue_version():
 #Inline Test
 def __test():
     issue_checker()
-    print issue_version()
+    print(issue_version())
 
 if '__main__' == __name__:
     __test()
